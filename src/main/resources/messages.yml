@@ -1,0 +1,73 @@
+# EldenCraft - Mensajes en español
+prefix: "&6[EldenCraft]&r "
+
+# General
+no-permission: "&cNo tienes permiso para hacer eso."
+player-only: "&cEste comando solo puede usarlo un jugador."
+invalid-args: "&cArgumentos incorrectos. Uso: {uso}"
+
+# Personaje
+character.no-class: "&eAún no tienes clase. Usa /mmo para elegir."
+character.no-race: "&eAún no tienes raza. Usa /mmo para elegir."
+character.level-up: "&a¡Subiste al nivel {nivel}!"
+character.xp-gained: "&7+{xp} XP"
+character.asi-available: "&b✦ ¡Mejora de característica disponible! (nivel {nivel}). El DM debe asignarla."
+
+# Recursos
+resource.not-enough: "&cNo tienes suficiente {recurso} (necesitas {coste}, tienes {actual})."
+resource.mana: "Maná"
+resource.energia: "Energía"
+
+# Hechizos
+spell.not-found: "&cHechizo '{id}' no encontrado."
+spell.no-access: "&cLos {clase} no tienen acceso a {hechizo}."
+spell.no-slot: "&cNo te quedan espacios de conjuro de nivel {nivel}."
+spell.cast: "&6¡Lanzaste {hechizo}!"
+spell.concentration-broken: "&cTu concentración se rompió."
+spell.truco-no-slot: "&7Los trucos no gastan espacios de conjuro."
+spell.invalid-level: "&cNivel de hechizo inválido. Debe ser entre 1 y 9."
+
+# Tiradas
+roll.result: "&7[Tirada] &f{expr} = &e{total} &7({desglose})"
+roll.critical-hit: "&c[¡CRÍTICO!] &f{expr} = &e{total}"
+roll.critical-fail: "&4[¡PIFIA!] &f{expr} = &e1"
+
+# Descansos
+rest.short-request: "&7Solicitud de descanso corto enviada al DM."
+rest.long-request: "&7Solicitud de descanso largo enviada al DM."
+rest.short-done: "&aDescansaste brevemente. Puedes gastar dados de golpe."
+rest.long-done: "&aDescansaste plenamente. PG, espacios de conjuro y recursos recuperados."
+rest.dm-only: "&cSolo el DM puede autorizar descansos directamente."
+rest.dm-request: "&e[DM] {jugador} solicita descanso {tipo}. Usa /ec descanso {tipo} {jugador} para concederlo."
+rest.invalid-type: "&cTipo de descanso inválido. Usa: corto o largo."
+
+# Pruebas
+skill-check.request: "&7{dm} te pide una prueba de &f{habilidad} &7(CD {cd})."
+skill-check.result: "&7[Prueba de {habilidad}] &fd20({dado}) + {mod} = &e{total} &7vs CD {cd}: {exito}"
+skill-check.success: "&aÉXITO"
+skill-check.failure: "&cFALLO"
+
+# Combate / PG
+hp.current: "&c❤ PG: {actual}/{maximo}"
+hp.healed: "&a+{cantidad} PG recuperados."
+hp.damaged: "&c-{cantidad} PG de daño."
+hp.zero: "&4¡Te has quedado sin puntos de golpe!"
+
+# Mundo
+world.natural-regen-off: "&7[EldenCraft] Regeneración natural desactivada en este mundo."
+world.mob-spawning-off: "&7[EldenCraft] Aparición de mobs desactivada en este mundo."
+world.keep-inventory-on: "&7[EldenCraft] keepInventory activado en este mundo."
+
+# Ficha
+ficha.header: "&6━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+ficha.title: "&e⚔ FICHA DE {nombre} &e⚔"
+ficha.race-class: "&7Raza: &f{raza} &7| Clase: &f{clase}"
+ficha.level-xp: "&7Nivel: &a{nivel} &7| XP: &f{xp}&7/&f{xp_next}"
+ficha.hp: "&c❤ PG: &f{hp_actual}&7/&f{hp_max}"
+ficha.resource: "&b✦ {recurso}: &f{actual}&7/&f{max}"
+ficha.fatigue: "&7Fatiga: &f{fatiga}%"
+ficha.gold: "&6⬛ Oro: &f{oro}"
+ficha.attrs: "&7FUE:&f{str}&7({str_mod}) DES:&f{dex}&7({dex_mod}) CON:&f{con}&7({con_mod})"
+ficha.attrs2: "&7INT:&f{int}&7({int_mod}) SAB:&f{wis}&7({wis_mod}) CAR:&f{cha}&7({cha_mod})"
+ficha.footer: "&6━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+ficha.player-not-found: "&cJugador no encontrado o sin datos."

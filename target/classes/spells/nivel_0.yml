@@ -1,0 +1,172 @@
+# =====================================================
+#   EldenCraft - Trucos (Nivel 0) SRD 5.1
+# =====================================================
+
+rayo_de_fuego:
+  nombre: "Rayo de Fuego"
+  nivel: 0
+  escuela: "evocacion"
+  clases: ["mage", "sorcerer"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "120 pies"
+  componentes: ["V", "S"]
+  duracion: "instantaneo"
+  concentracion: false
+  objetivo: "criatura"
+  efectos:
+    - tipo: "ataque_conjuro"
+      dados: "1d10"
+      tipo_dano: "fuego"
+  mejora_personaje: "+1d10 a nivel 5, 11 y 17"
+  custom: false
+  fuente: "SRD"
+
+luz:
+  nombre: "Luz"
+  nivel: 0
+  escuela: "evocacion"
+  clases: ["cleric", "bard", "druid", "mage", "sorcerer"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "toque"
+  componentes: ["V", "M:una luciernaga"]
+  duracion: "1 hora"
+  concentracion: false
+  objetivo: "punto"
+  efectos:
+    - tipo: "utilidad"
+  custom: false
+  fuente: "SRD"
+
+mano_de_mago:
+  nombre: "Mano de Mago"
+  nivel: 0
+  escuela: "conjuracion"
+  clases: ["mage", "sorcerer", "warlock", "bard"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "30 pies"
+  componentes: ["V", "S"]
+  duracion: "1 minuto"
+  concentracion: false
+  objetivo: "punto"
+  efectos:
+    - tipo: "utilidad"
+  custom: false
+  fuente: "SRD"
+
+descarga_sobrenatural:
+  nombre: "Descarga Sobrenatural"
+  nivel: 0
+  escuela: "evocacion"
+  clases: ["warlock"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "120 pies"
+  componentes: ["V", "S"]
+  duracion: "instantaneo"
+  concentracion: false
+  objetivo: "criatura"
+  efectos:
+    - tipo: "ataque_conjuro"
+      dados: "1d10"
+      tipo_dano: "fuerza"
+  mejora_personaje: "+1 haz a nivel 5, 11 y 17"
+  custom: false
+  fuente: "SRD"
+
+guia:
+  nombre: "Guía"
+  nivel: 0
+  escuela: "adivinacion"
+  clases: ["cleric", "druid"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "toque"
+  componentes: ["V", "S"]
+  duracion: "concentracion 1 minuto"
+  concentracion: true
+  objetivo: "criatura"
+  efectos:
+    - tipo: "buff"
+      dados: "1d4"
+  custom: false
+  fuente: "SRD"
+
+ilusion_menor:
+  nombre: "Ilusión Menor"
+  nivel: 0
+  escuela: "ilusion"
+  clases: ["bard", "mage", "sorcerer", "warlock"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "30 pies"
+  componentes: ["S", "M:un vellon de lana"]
+  duracion: "1 minuto"
+  concentracion: false
+  objetivo: "punto"
+  efectos:
+    - tipo: "utilidad"
+  custom: false
+  fuente: "SRD"
+
+contacto_electrizante:
+  nombre: "Contacto Electrizante"
+  nivel: 0
+  escuela: "evocacion"
+  clases: ["mage", "sorcerer"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "toque"
+  componentes: ["V", "S"]
+  duracion: "instantaneo"
+  concentracion: false
+  objetivo: "criatura"
+  efectos:
+    - tipo: "ataque_conjuro"
+      dados: "1d8"
+      tipo_dano: "relampago"
+  mejora_personaje: "+1d8 a nivel 5, 11 y 17"
+  custom: false
+  fuente: "SRD"
+
+piedad_con_los_moribundos:
+  nombre: "Piedad con los Moribundos"
+  nivel: 0
+  escuela: "necromancia"
+  clases: ["cleric"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "toque"
+  componentes: ["V", "S"]
+  duracion: "instantaneo"
+  concentracion: false
+  objetivo: "criatura"
+  efectos:
+    - tipo: "curacion"
+      dados: "0"
+  custom: false
+  fuente: "SRD"
+
+burla_danina:
+  nombre: "Burla Dañina"
+  nivel: 0
+  escuela: "encantamiento"
+  clases: ["bard"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "60 pies"
+  componentes: ["V"]
+  duracion: "instantaneo"
+  concentracion: false
+  objetivo: "criatura"
+  efectos:
+    - tipo: "salvacion"
+      salvacion: "SAB"
+      dados: "1d4"
+      tipo_dano: "psiquico"
+      salvacion_mitad: false
+  mejora_personaje: "+1d4 a nivel 5, 11 y 17"
+  custom: false
+  fuente: "SRD"

@@ -1,0 +1,107 @@
+name: EldenCraft
+version: 3.1
+main: com.tuusuario.mmo.eldencraft.EldenCraft
+api-version: '1.21'
+author: NaNO3
+description: "Plugin D&D 5e compatible con SRD 5.1 — 13 clases, 13 razas, 91 habilidades, misiones, economía, tienda, partys y armaduras RPG."
+
+commands:
+  mmo:
+    description: Comando principal para elegir raza y clase.
+    usage: /mmo elegir <RAZA> <CLASE>
+  shop:
+    description: Abre la tienda del MMO.
+    usage: /shop
+  missions:
+    description: Abre el panel de misiones.
+    usage: /missions
+    aliases: [misiones, quests]
+  balance:
+    description: Muestra tu saldo en oro.
+    usage: /balance
+    aliases: [bal, dinero, money]
+  skills:
+    description: Muestra tus habilidades de clase con descripcion.
+    usage: /skills
+    aliases: [habilidades, skill]
+  party:
+    description: Sistema de partys (crear, invitar, salir, ver miembros).
+    usage: /party <create|invite|accept|leave|kick|disband|list>
+    aliases: [grupo, p]
+  eldencraft:
+    description: Comando admin del plugin.
+    usage: /eldencraft <reload|setlevel|givemoney|resetdata|spawnboss|listbosses|descanso>
+    aliases: [ec]
+    permission: eldencraft.admin
+  boss:
+    description: Invoca un jefe legendario en tu posicion (solo admin).
+    usage: /boss <id>
+    permission: eldencraft.admin
+  rpgarmor:
+    description: Comandos administrativos del sistema de armaduras RPG.
+    usage: /rpgarmor <give|reload|info>
+    permission: rpgarmor.admin
+  # F2: Nuevos comandos D&D 5e
+  ficha:
+    description: "Muestra tu ficha de personaje D&D."
+    usage: /ficha [jugador]
+    permission: eldencraft.player
+  roll:
+    description: "Lanza dados. Uso: /roll 2d6+3"
+    usage: /roll <expresion>
+    aliases: [tirar]
+    permission: eldencraft.player
+  prueba:
+    description: "Realiza una prueba de habilidad D&D."
+    usage: /prueba <habilidad> [cd]
+    permission: eldencraft.player
+  descanso:
+    description: "Solicita un descanso corto o largo al DM."
+    usage: /descanso <corto|largo>
+    permission: eldencraft.player
+  # F3: Motor de hechizos
+  lanzar:
+    description: "Lanza un hechizo. Uso: /lanzar <id> [nivel]"
+    usage: /lanzar <id> [nivel]
+    permission: eldencraft.player
+  # F3B-1: Multi-personaje y Lobby
+  personajes:
+    description: "Abre el selector de personajes (1-27 slots)."
+    usage: /personajes
+    aliases: [menu]
+    permission: eldencraft.player
+  personaje:
+    description: "Gestión de personajes (crear, cambiar, borrar, info, etc.)."
+    usage: /personaje <crear|cambiar|borrar|recuperar|info|duplicar|exportar>
+    aliases: [pj]
+    permission: eldencraft.player
+  lobby:
+    description: "Regresa al lobby de EldenCraft."
+    usage: /lobby
+    aliases: [hub]
+    permission: eldencraft.player
+  # F3B-2: Campañas
+  campana:
+    description: "Gestión de campañas de rol D&D."
+    usage: /campana <crear|abrir|cerrar|invitar|unirse|lista|info|mundo|rol>
+    aliases: [campaña, campaign]
+    permission: eldencraft.player
+  # F3B-3: Panel DM
+  dm:
+    description: "Panel del Dungeon Master de campaña."
+    usage: /dm <fichas|aprobar|xp|oro|sesion>
+    permission: eldencraft.player
+
+permissions:
+  eldencraft.admin:
+    description: Permite usar comandos admin de EldenCraft.
+    default: op
+  eldencraft.player:
+    description: Permiso de jugador de EldenCraft.
+    default: true
+  eldencraft.dm:
+    description: Permite usar comandos de Dungeon Master.
+    default: op
+  rpgarmor.admin:
+    description: Permite usar comandos administrativos del sistema de armaduras.
+    default: op

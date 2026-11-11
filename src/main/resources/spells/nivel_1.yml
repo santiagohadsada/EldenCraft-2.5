@@ -1,0 +1,225 @@
+# =====================================================
+#   EldenCraft - Hechizos de Nivel 1 SRD 5.1
+# =====================================================
+
+curar_heridas:
+  nombre: "Curar Heridas"
+  nivel: 1
+  escuela: "evocacion"
+  clases: ["cleric", "druid", "bard", "paladin", "ranger"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "toque"
+  componentes: ["V", "S"]
+  duracion: "instantaneo"
+  concentracion: false
+  objetivo: "criatura"
+  efectos:
+    - tipo: "curacion"
+      dados: "1d8"
+      mejora_nivel: "+1d8 por nivel superior al 1"
+  mejora_nivel: "+1d8 por nivel superior"
+  custom: false
+  fuente: "SRD"
+
+proyectil_magico:
+  nombre: "Proyectil Mágico"
+  nivel: 1
+  escuela: "evocacion"
+  clases: ["mage", "sorcerer"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "120 pies"
+  componentes: ["V", "S"]
+  duracion: "instantaneo"
+  concentracion: false
+  objetivo: "criatura"
+  efectos:
+    - tipo: "daño"
+      dados: "3d4+3"
+      tipo_dano: "fuerza"
+      salvacion_mitad: false
+  mejora_nivel: "+1d4+1 por nivel superior"
+  custom: false
+  fuente: "SRD"
+
+escudo:
+  nombre: "Escudo"
+  nivel: 1
+  escuela: "abjuracion"
+  clases: ["mage", "sorcerer"]
+  tiempo_lanzamiento: "reaccion"
+  ritual: false
+  alcance: "propio"
+  componentes: ["V", "S"]
+  duracion: "1 ronda"
+  concentracion: false
+  objetivo: "yo"
+  efectos:
+    - tipo: "buff"
+  custom: false
+  fuente: "SRD"
+
+palabra_curativa:
+  nombre: "Palabra Curativa"
+  nivel: 1
+  escuela: "evocacion"
+  clases: ["cleric", "druid", "bard"]
+  tiempo_lanzamiento: "adicional"
+  ritual: false
+  alcance: "60 pies"
+  componentes: ["V"]
+  duracion: "instantaneo"
+  concentracion: false
+  objetivo: "criatura"
+  efectos:
+    - tipo: "curacion"
+      dados: "1d4"
+  mejora_nivel: "+1d4 por nivel superior"
+  custom: false
+  fuente: "SRD"
+
+sueno:
+  nombre: "Sueño"
+  nivel: 1
+  escuela: "encantamiento"
+  clases: ["bard", "mage", "sorcerer"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "90 pies"
+  componentes: ["V", "S", "M:un pellizco de arena"]
+  duracion: "1 minuto"
+  concentracion: false
+  objetivo: "area"
+  area:
+    forma: "esfera"
+    tamano_pies: 20
+  efectos:
+    - tipo: "condicion"
+      condicion: "sueño"
+      duracion: "10 rondas"
+  custom: false
+  fuente: "SRD"
+
+manos_ardientes:
+  nombre: "Manos Ardientes"
+  nivel: 1
+  escuela: "evocacion"
+  clases: ["mage", "sorcerer"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "propio"
+  area:
+    forma: "cono"
+    tamano_pies: 15
+  componentes: ["V", "S"]
+  duracion: "instantaneo"
+  concentracion: false
+  objetivo: "area"
+  efectos:
+    - tipo: "salvacion"
+      salvacion: "DES"
+      dados: "3d6"
+      tipo_dano: "fuego"
+      salvacion_mitad: true
+  mejora_nivel: "+1d6 por nivel superior"
+  custom: false
+  fuente: "SRD"
+
+armadura_de_mago:
+  nombre: "Armadura de Mago"
+  nivel: 1
+  escuela: "abjuracion"
+  clases: ["mage", "sorcerer"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "toque"
+  componentes: ["V", "S", "M:un trozo de cuero curado"]
+  duracion: "8 horas"
+  concentracion: false
+  objetivo: "criatura"
+  efectos:
+    - tipo: "buff"
+  custom: false
+  fuente: "SRD"
+
+onda_atronadora:
+  nombre: "Onda Atronadora"
+  nivel: 1
+  escuela: "evocacion"
+  clases: ["bard", "druid", "mage", "sorcerer"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "propio"
+  area:
+    forma: "cubo"
+    tamano_pies: 15
+  componentes: ["V", "S"]
+  duracion: "instantaneo"
+  concentracion: false
+  objetivo: "area"
+  efectos:
+    - tipo: "salvacion"
+      salvacion: "CON"
+      dados: "2d8"
+      tipo_dano: "trueno"
+      salvacion_mitad: true
+  mejora_nivel: "+1d8 por nivel superior"
+  custom: false
+  fuente: "SRD"
+
+saeta_guiada:
+  nombre: "Saeta Guiada"
+  nivel: 1
+  escuela: "evocacion"
+  clases: ["cleric"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "120 pies"
+  componentes: ["V", "S"]
+  duracion: "1 ronda"
+  concentracion: false
+  objetivo: "criatura"
+  efectos:
+    - tipo: "ataque_conjuro"
+      dados: "4d6"
+      tipo_dano: "radiante"
+  mejora_nivel: "+1d6 por nivel superior"
+  custom: false
+  fuente: "SRD"
+
+bendicion:
+  nombre: "Bendición"
+  nivel: 1
+  escuela: "encantamiento"
+  clases: ["cleric", "paladin"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "30 pies"
+  componentes: ["V", "S", "M:una rociada de agua bendita"]
+  duracion: "concentracion 1 minuto"
+  concentracion: true
+  objetivo: "criatura"
+  efectos:
+    - tipo: "buff"
+      dados: "1d4"
+  custom: false
+  fuente: "SRD"
+
+marca_del_cazador:
+  nombre: "Marca del Cazador"
+  nivel: 1
+  escuela: "adivinacion"
+  clases: ["ranger"]
+  tiempo_lanzamiento: "adicional"
+  ritual: false
+  alcance: "90 pies"
+  componentes: ["V"]
+  duracion: "concentracion 1 hora"
+  concentracion: true
+  objetivo: "criatura"
+  efectos:
+    - tipo: "buff"
+      dados: "1d6"
+  custom: false
+  fuente: "SRD"

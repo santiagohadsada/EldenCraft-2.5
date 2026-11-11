@@ -1,0 +1,68 @@
+# =====================================================
+#   EldenCraft - Tienda por clase
+# =====================================================
+# Cada clase tiene una lista de items.
+# Formato:
+#   - material: DIAMOND_SWORD       # Material vanilla o id de plugin externo
+#     name: "&6Espada del Heroe"    # Nombre visible
+#     price: 500                    # Precio en oro
+#     lore:                         # Descripcion (opcional)
+#       - "&7Una espada legendaria"
+#
+# Los items quedan vacios a proposito: tu los rellenas
+# con tu plugin de ItemEdit / MMOItems / etc.
+#
+# IMPORTANTE: Para usar un item de otro plugin, simplemente
+# pon su material como referencia (DIAMOND_SWORD por ejemplo)
+# y luego usa /itemedit u otro plugin para personalizarlo
+# despues de comprarlo. O extiende el codigo de ShopManager
+# para integrar tu plugin externo.
+
+WARRIOR:
+  - material: IRON_SWORD
+    name: "&cEspada de Guerrero I"
+    price: 200
+    lore:
+      - "&7Para guerreros novatos."
+
+MAGE:
+  - material: BLAZE_ROD
+    name: "&bVara Magica I"
+    price: 250
+    lore:
+      - "&7Aumenta tu poder magico."
+
+RANGER:
+  - material: BOW
+    name: "&aArco del Cazador"
+    price: 220
+    lore:
+      - "&7Preciso y rapido."
+
+PALADIN:
+  - material: GOLDEN_CHESTPLATE
+    name: "&ePechera Sagrada"
+    price: 300
+    lore:
+      - "&7Bendecida por la luz."
+
+ROGUE:
+  - material: IRON_AXE
+    name: "&8Daga Sigilosa"
+    price: 180
+    lore:
+      - "&7Mortal a corta distancia."
+
+BARD:
+  - material: JUKEBOX
+    name: "&dLaud Encantado"
+    price: 250
+    lore:
+      - "&7La musica es tu arma."
+
+BARBARIAN:
+  - material: IRON_AXE
+    name: "&4Hacha Salvaje"
+    price: 280
+    lore:
+      - "&7Brutalidad pura."

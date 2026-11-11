@@ -1,0 +1,164 @@
+# =====================================================
+#   EldenCraft - Configuracion principal
+# =====================================================
+
+# Modo de recursos: SLOTS para espacios de conjuro D&D 5e o MANA para legacy
+resource-mode: SLOTS
+
+lobby:
+  force-on-join: true
+  world-name: ec_lobby
+  spawn:
+    x: 0.5
+    y: 65.0
+    z: 0.5
+    yaw: 0.0
+    pitch: 0.0
+
+rejoin:
+  auto: true
+
+campaigns:
+  isolate-visibility: true
+  max-loaded-worlds: 3
+
+characters:
+  max-slots: 27
+  delete-grace-days: 7
+  campaign-binding: BOUND
+
+economy:
+  starting-gold: 50
+  hostile-mob-drop-multiplier: 0.5
+  gold-per-level: 100
+
+experience:
+  mob-exp-multiplier: 1.0
+  mission-exp-multiplier: 1.0
+  # Si es true, usa la tabla XP SRD 5.1 en lugar de la formula exponencial legacy
+  use-srd-table: false  # # VERIFICAR: activar cuando los jugadores estén de acuerdo
+
+level-rewards:
+  '1':
+    gold: 50
+    items: []
+  '3':
+    gold: 100
+    items:
+      - "IRON_SWORD"
+  '5':
+    gold: 150
+    items: []
+  '10':
+    gold: 300
+    items:
+      - "DIAMOND"
+  '15':
+    gold: 500
+    items: []
+  '20':
+    gold: 1000
+    items:
+      - "NETHERITE_INGOT"
+
+shop:
+  enabled: true
+
+# =====================================================
+#   F1: Habilidades legacy (prueba del palo)
+# =====================================================
+legacy-skills:
+  enabled: false
+  # SpellListener era una prueba del palo — desactivado por defecto
+  spell-listener: false
+
+# =====================================================
+#   F1: Reglas de mundo configurables
+# =====================================================
+world-rules:
+  # Lista de nombres de mundo donde aplicar las reglas (vacío = no aplica)
+  apply-to-worlds: []
+  natural-regeneration: false
+  mob-spawning: false
+  keep-inventory: true
+
+# =====================================================
+#   F1: Sistema de PG D&D vs corazones
+# =====================================================
+hp:
+  # Si es false, usa el sistema de vida vanilla de Minecraft
+  dnd-hp-enabled: true
+  # La barra de corazones es proporcional al % de PG máximo
+  hearts-proportional: true
+  # PG máximo D&D por defecto (antes de tener ficha completa)
+  default-max-hp: 10
+  # Cuántos PG D&D equivale a 1 corazón de Minecraft (1 corazón = 2 HP vanilla)
+  hp-per-heart: 1
+
+# =====================================================
+#   Modulo de Armaduras RPG
+# =====================================================
+class-restrictions:
+  MAGE:       [LIGERA]
+  BARBARIAN:  [LIGERA]
+  BARD:       [LIGERA]
+  ROGUE:      [LIGERA, INTERMEDIA]
+  RANGER:     [LIGERA, INTERMEDIA]
+  WARRIOR:    [LIGERA, INTERMEDIA, PESADA]
+  PALADIN:    [LIGERA, INTERMEDIA, PESADA]
+  SORCERER:   [LIGERA]
+  WARLOCK:    [LIGERA]
+  MONK:       [LIGERA]
+  DRUID:      [LIGERA, INTERMEDIA]
+  CLERIC:     [LIGERA, INTERMEDIA]
+  GUNSLINGER: [LIGERA, INTERMEDIA]
+
+anti-exploit:
+  remove-piece: true
+  apply-effects: true
+  slowness-amplifier: 1
+  weakness-amplifier: 0
+  periodic-damage: 1.0
+  check-interval-ticks: 40
+
+caps:
+  crit-chance: 40.0
+  damage-bonus: 100.0
+  damage-reduction: 50.0
+  speed-bonus: 20.0
+  cooldown-reduction: 40.0
+  lifesteal: 25.0
+  extra-health: 20.0
+  defense: 40.0
+
+upgrades:
+  max-level: 5
+  base-cost: 5
+  step-cost: 5
+
+drops:
+  enabled: true
+  miniboss-base-chance: 0.10
+  boss-base-chance: 0.05
+  dragon-boss-chance: 0.95
+  level-multiplier: 0.005
+  difficulty-multiplier: 1.0
+  rarity-weights:
+    COMUN: 70
+    RARO: 22
+    EPICO: 7
+    LEGENDARIO: 1
+
+# =====================================================
+#   Configuracion de Base de Datos (SQLITE / MYSQL)
+# =====================================================
+database:
+  type: SQLITE
+
+  mysql:
+    host: localhost
+    port: 3306
+    database: eldencraft
+    username: root
+    password: ""
+    useSSL: false

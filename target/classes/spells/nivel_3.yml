@@ -1,0 +1,167 @@
+# =====================================================
+#   EldenCraft - Hechizos de Nivel 3 SRD 5.1
+# =====================================================
+
+bola_de_fuego:
+  nombre: "Bola de Fuego"
+  nivel: 3
+  escuela: "evocacion"
+  clases: ["mage", "sorcerer"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "150 pies"
+  area:
+    forma: "esfera"
+    tamano_pies: 20
+  componentes: ["V", "S", "M:una bolita de guano de murcielago y azufre"]
+  duracion: "instantaneo"
+  concentracion: false
+  objetivo: "punto"
+  efectos:
+    - tipo: "salvacion"
+      salvacion: "DES"
+      dados: "8d6"
+      tipo_dano: "fuego"
+      salvacion_mitad: true
+  mejora_nivel: "+1d6 por nivel superior al 3"
+  custom: false
+  fuente: "SRD"
+
+contrahechizo:
+  nombre: "Contrahechizo"
+  nivel: 3
+  escuela: "abjuracion"
+  clases: ["mage", "sorcerer", "warlock"]
+  tiempo_lanzamiento: "reaccion"
+  ritual: false
+  alcance: "60 pies"
+  componentes: ["S"]
+  duracion: "instantaneo"
+  concentracion: false
+  objetivo: "criatura"
+  efectos:
+    - tipo: "especial"
+  mejora_nivel: "anula automaticamente hechizos de nivel igual o menor al espacio usado"
+  custom: false
+  fuente: "SRD"
+
+relampago:
+  nombre: "Relámpago"
+  nivel: 3
+  escuela: "evocacion"
+  clases: ["mage", "sorcerer"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "propio"
+  area:
+    forma: "linea"
+    tamano_pies: 100
+  componentes: ["V", "S", "M:un pedazo de piel y una varilla de ambar"]
+  duracion: "instantaneo"
+  concentracion: false
+  objetivo: "area"
+  efectos:
+    - tipo: "salvacion"
+      salvacion: "DES"
+      dados: "8d6"
+      tipo_dano: "relampago"
+      salvacion_mitad: true
+  mejora_nivel: "+1d6 por nivel superior"
+  custom: false
+  fuente: "SRD"
+
+revivir:
+  nombre: "Revivir"
+  nivel: 3
+  escuela: "necromancia"
+  clases: ["cleric", "paladin"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "toque"
+  componentes: ["V", "S", "M:diamantes por valor de 300 po"]
+  duracion: "instantaneo"
+  concentracion: false
+  objetivo: "criatura"
+  efectos:
+    - tipo: "curacion"
+      dados: "1"
+  custom: false
+  fuente: "SRD"
+
+palabra_de_curacion_en_masa:
+  nombre: "Palabra de Curación en Masa"
+  nivel: 3
+  escuela: "evocacion"
+  clases: ["cleric"]
+  tiempo_lanzamiento: "adicional"
+  ritual: false
+  alcance: "60 pies"
+  componentes: ["V"]
+  duracion: "instantaneo"
+  concentracion: false
+  objetivo: "criatura"
+  efectos:
+    - tipo: "curacion"
+      dados: "1d4"
+  mejora_nivel: "+1d4 por nivel superior"
+  custom: false
+  fuente: "SRD"
+
+disipar_magia:
+  nombre: "Disipar Magia"
+  nivel: 3
+  escuela: "abjuracion"
+  clases: ["bard", "cleric", "druid", "paladin", "mage", "sorcerer", "warlock"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "120 pies"
+  componentes: ["V", "S"]
+  duracion: "instantaneo"
+  concentracion: false
+  objetivo: "criatura"
+  efectos:
+    - tipo: "especial"
+  custom: false
+  fuente: "SRD"
+
+volar:
+  nombre: "Volar"
+  nivel: 3
+  escuela: "transmutacion"
+  clases: ["mage", "sorcerer", "warlock"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "toque"
+  componentes: ["V", "S", "M:una pluma de ala de cualquier ave"]
+  duracion: "concentracion 10 minutos"
+  concentracion: true
+  objetivo: "criatura"
+  efectos:
+    - tipo: "buff"
+  custom: false
+  fuente: "SRD"
+
+espiritus_guardianes:
+  nombre: "Espíritus Guardianes"
+  nivel: 3
+  escuela: "conjuracion"
+  clases: ["cleric"]
+  tiempo_lanzamiento: "accion"
+  ritual: false
+  alcance: "propio"
+  area:
+    forma: "esfera"
+    tamano_pies: 15
+  componentes: ["V", "S", "M:un simbolo sagrado"]
+  duracion: "concentracion 10 minutos"
+  concentracion: true
+  objetivo: "area"
+  efectos:
+    - tipo: "salvacion"
+      salvacion: "SAB"
+      dados: "3d8"
+      tipo_dano: "radiante"
+      salvacion_mitad: true
+  mejora_nivel: "+1d8 por nivel superior"
+  custom: false
+  fuente: "SRD"

@@ -1,0 +1,126 @@
+# ============================================================
+# JEFES LEGENDARIOS DE ELDENCRAFT
+# ============================================================
+# Cada jefe se basa en una entidad vanilla pero con stats brutales,
+# nombre personalizado, brillo y loot custom.
+#
+# Campos:
+#   entity      -> EntityType valido (RAVAGER, WARDEN, BREEZE, BOGGED...)
+#   display     -> Nombre visible (acepta &#colores)
+#   max-health  -> Vida maxima (en puntos, 1 corazon = 2)
+#   damage      -> Da#o base de melee (atributo GENERIC_ATTACK_DAMAGE)
+#   armor       -> Armadura (atributo GENERIC_ARMOR, 0..30)
+#   speed       -> Multiplicador de velocidad (1.0 = normal)
+#   glowing     -> Si brilla a traves de paredes
+#   exp-reward  -> EXP del MMO al matarlo
+#   gold-reward -> Oro al matarlo
+#   loot        -> Items que dropea (lista MATERIAL:cantidad)
+#   announce    -> Mensaje al broadcast cuando aparece
+# ============================================================
+
+bosses:
+
+  skarn:
+    entity: STRAY
+    display: "&b&l☃ Skarn, el Devastador del Hielo"
+    max-health: 400
+    damage: 12
+    armor: 12
+    speed: 1.1
+    glowing: true
+    exp-reward: 1500
+    gold-reward: 500
+    loot:
+      - DIAMOND:8
+      - PACKED_ICE:32
+      - ENCHANTED_BOOK:1
+    announce: "&b❄ Skarn ha despertado en el reino..."
+
+  vrall:
+    # BREEZE -> nuevo en 1.21+
+    entity: BREEZE
+    display: "&f&l⚡ Vrall, Se#or de los Vientos"
+    max-health: 350
+    damage: 10
+    armor: 6
+    speed: 1.2
+    glowing: true
+    exp-reward: 1800
+    gold-reward: 700
+    loot:
+      - WIND_CHARGE:16
+      - BREEZE_ROD:2
+      - DIAMOND:6
+      - GOLDEN_APPLE:4
+    announce: "&f⚡ Una tormenta se levanta. Vrall ha llegado."
+
+  athrok:
+    # BOGGED -> nuevo en 1.21+
+    entity: BOGGED
+    display: "&2&l☠ Athrok, Tirano del Pantano"
+    max-health: 300
+    damage: 9
+    armor: 8
+    speed: 1.0
+    glowing: true
+    exp-reward: 1400
+    gold-reward: 450
+    loot:
+      - SPIDER_EYE:16
+      - BOW:1
+      - ARROW:64
+      - EMERALD:12
+    announce: "&2☠ Un hedor putrido se siente... Athrok merodea."
+
+  morguz:
+    entity: PIGLIN_BRUTE
+    display: "&c&l⚔ Morguz, Carnicero del Ocaso"
+    max-health: 500
+    damage: 15
+    armor: 14
+    speed: 1.0
+    glowing: true
+    exp-reward: 2000
+    gold-reward: 800
+    loot:
+      - GOLDEN_AXE:1
+      - NETHERITE_SCRAP:2
+      - GOLD_INGOT:32
+      - GLOWSTONE_DUST:16
+    announce: "&c⚔ Morguz ha venido a coleccionar craneos."
+
+  nectaris:
+    entity: RAVAGER
+    display: "&5&l✿ Nectaris, Reina del Nectar Putrefacto"
+    max-health: 700
+    damage: 18
+    armor: 16
+    speed: 0.9
+    glowing: true
+    exp-reward: 2500
+    gold-reward: 1000
+    loot:
+      - DIAMOND:16
+      - HONEYCOMB:16
+      - SADDLE:1
+      - ENCHANTED_GOLDEN_APPLE:1
+    announce: "&5✿ El suelo tiembla... Nectaris emerge de las profundidades."
+
+  drael:
+    # JEFE FINAL: WARDEN brutal
+    entity: WARDEN
+    display: "&8&l✟ Drael, Heraldo del Olvido"
+    max-health: 1000
+    damage: 30
+    armor: 20
+    speed: 1.0
+    glowing: true
+    exp-reward: 8000
+    gold-reward: 3000
+    loot:
+      - NETHERITE_INGOT:4
+      - DIAMOND_BLOCK:4
+      - ENCHANTED_GOLDEN_APPLE:8
+      - TOTEM_OF_UNDYING:2
+      - ECHO_SHARD:16
+    announce: "&8&l✟ &7El cielo se oscurece... &8&lDRAEL &7ha despertado."
